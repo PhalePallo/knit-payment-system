@@ -1,38 +1,31 @@
 # Knit Payment System
 
-A simple React + Flask payment system for schools and students.  
-Allows making student payments, calculating knit fees, and viewing school revenue.
+A simple payment system for schools, tracking payments and calculating school revenue with a 2% Knit fee.
 
 ---
 
 ## Setup Steps
 
-1. **Clone the repository**  
+### 1. Clone the repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/PhalePallo/knit-payment-system.git
 cd knit-payment-system
-
-2 **Setup Python virtual environment**
-
+2. Setup Python virtual environment
 python -m venv .venv
 # Windows
 .venv\Scripts\activate
 # macOS/Linux
 source .venv/bin/activate
-
-3 **Install backend dependencies**
-```bash
+3. Install backend dependencies
 pip install -r requirements.txt
+4. Run the backend
+python app.py
 
-4 **Run the backend**
-Run the backend
-
-This will create knit_payments.db SQLite database and seed initial schools and students.
+This will create the knit_payments.db SQLite database and seed initial schools and students.
 
 Backend runs at http://127.0.0.1:5000
 
-5 **Setup and run frontend**
-```bash
+5. Setup and run frontend
 cd frontend
 npm install
 npm start
@@ -41,8 +34,7 @@ React app runs at http://localhost:3000
 
 Ensure the backend is running before using the frontend.
 
-
-### Assumptions Made
+Assumptions Made
 
 Each student belongs to exactly one school.
 
@@ -62,7 +54,7 @@ SQLite is used as the database for simplicity.
 
 CORS is enabled to allow React frontend to communicate with Flask backend.
 
-## Improvements With More Time
+Improvements With More Time
 
 Implement authentication for admins, students, and schools.
 
@@ -80,7 +72,7 @@ Support multiple payment methods (cards, mobile payments).
 
 Implement real-time updates using WebSockets for revenue and payments.
 
-**Project Structure**
+Project Structure
 knit-payment-system/
 │
 ├─ backend/
@@ -103,9 +95,7 @@ knit-payment-system/
 │   └─ ...other React files
 │
 └─ README.md
-
 Usage
-
 Make a Payment
 
 Select a student
@@ -123,4 +113,3 @@ Select a school
 Click Get Revenue
 
 View total collected, knit fees, and amount paid to school
-

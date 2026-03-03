@@ -8,7 +8,8 @@ logging.basicConfig(level=logging.INFO)
 
 payments = Blueprint("payments", __name__, url_prefix="/payments")
 
-@payments.route("/", methods=["POST"])
+# ✅ Remove trailing slash to prevent 308 redirect
+@payments.route("", methods=["POST"])
 def create_payment():
     try:
         data = request.get_json(force=True)
